@@ -1,16 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - main block
- * Description: print alphabet in lowercase using putchr
- * return: 0
+ * Description: Print alphaets in lowercase
+ * Return: 0
  */
-
-int main ()
+int main(void)
 {
-	char c;
-	for (c = 'a'; c <= 'z'; c++)
+	char c = 'a';
+
+	while (c <= 'z')
 	{
-		putchar (c);
+		putchar(c);
+		c++;
 	}
-	return 0;
+
+	putchar('\n');
+	return (0);
 }
