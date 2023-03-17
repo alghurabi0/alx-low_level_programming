@@ -8,15 +8,12 @@
 int main(void)
 {
 	    char c;
-    int i;
 
-    // print lowercase alphabets
     for (c = 'a'; c <= 'z'; c++)
     {
         putchar(c);
     }
 
-    // print uppercase alphabets
     for (c = 'A'; c <= 'Z'; c++)
     {
         putchar(c);
