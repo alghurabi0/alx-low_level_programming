@@ -6,19 +6,22 @@
  */
 int print_sign(int n)
 {
+	int lala;
+
 	if (n > 0)
 	{
-		return (1);
+		lala = 1;
 		_putchar('+');
 	}
 	else if (n == 0)
 	{
-		return (0);
+		lala = 0;
 		_putchar('0');
 	}
 	else
 	{
-		return (-1);
+		lala = -1;
 		_putchar('-');
 	}
+	return (lala);
 }
