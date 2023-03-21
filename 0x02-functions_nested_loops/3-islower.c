@@ -2,6 +2,7 @@
 /**
  * _islower - main block
  * islower(int c) - lower
+ * @c : character to check the letter
  * Return: 1 if 'c' is lowercase
  * Otherwise return 0
  */
