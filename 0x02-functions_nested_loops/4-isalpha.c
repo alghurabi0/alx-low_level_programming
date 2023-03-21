@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _isalpha - main block
- * @c - variable
- * return: 0 or 1
+ * @c : variable
+ * Return: 0 or 1
  */
 int _isalpha(int c)
 {
