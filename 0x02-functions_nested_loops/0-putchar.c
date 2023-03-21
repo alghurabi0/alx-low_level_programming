@@ -6,6 +6,6 @@
  */
 int main()
 {
-	printf( "_putchar\n" );
+	test( "_putchar\n" );
 	return 0;
 }

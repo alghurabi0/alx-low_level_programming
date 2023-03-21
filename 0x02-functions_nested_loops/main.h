@@ -1,1 +1,1 @@
-int printf(const char *text);
+int test(const char *text);
