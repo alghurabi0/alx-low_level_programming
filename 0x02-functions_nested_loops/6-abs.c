@@ -20,4 +20,5 @@ int _abs(int n)
 	{
 		test = 0;
 	}
+	return (test);
 }
