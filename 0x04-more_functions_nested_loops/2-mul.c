@@ -7,11 +7,5 @@
  */
 int mul(int a, int b)
 {
-	int i;
-
-	if ((a >= 0 && a <= 127) && (b <= 0 && b <= 127))
-	{
-		i = a * b;
-		return (i);
-	}
+	return a * b;
 }
