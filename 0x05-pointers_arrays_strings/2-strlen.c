@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _strlen - main
- * @*s: var
+ * @s: var
  * Return: 0
  */
 int _strlen(char *s)
@@ -13,5 +13,5 @@ int _strlen(char *s)
 		len++;
 		s++;
 	}
-	return len;
+	return (len);
 }
