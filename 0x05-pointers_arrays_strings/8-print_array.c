@@ -1,0 +1,20 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * print_array - main func
+ * @a: pointer to array of int
+ * @n: number of elements of the array pointed
+ * Return: 0
+ */
+void print_array(int *a, int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", a[i]);
+		if (i != n - 1)
+			printf(", ");
+	}
+	printf("\n");
+}
