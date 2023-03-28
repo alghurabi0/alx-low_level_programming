@@ -22,7 +22,7 @@ int _atoi(char *s)
 			sign = 1;
 		}
 		else if (sign == 1)
-			break:
+			break;
 	}
 	num = sig * num;
 	return (num);
