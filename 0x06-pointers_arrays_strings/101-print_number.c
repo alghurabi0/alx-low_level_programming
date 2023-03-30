@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_number - printing function
- * @int: var
+ * @n: var
  * Return: 0
  */
 void print_number(int n)
@@ -15,6 +15,6 @@ void print_number(int n)
 		nn = -n;
 	}
 	if (nn / 10 != 0)
-		print_number(n / 10);
+		print_number(nn / 10);
 	_putchar((nn % 10) + '0');
 }
