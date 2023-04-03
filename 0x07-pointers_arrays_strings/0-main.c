@@ -33,7 +33,7 @@ int main(void)
 
 	simple_print_buffer(buffer, 98);
 	_memset(buffer, 0x01, 95);
-	printf("------------------------------------------------");
+	printf("------------------------------------------------\n");
 	simple_print_buffer(buffer, 98);
 	return (0);
 }
