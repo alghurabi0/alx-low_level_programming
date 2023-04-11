@@ -7,17 +7,19 @@
  * @c: char
  * Return: NULL or pointer to the array
  */
+char *arr;
+unsigned int i;
+
 char *create_array(unsigned int size, char c)
 {
 	int i = 0;
 
 	if (size == 0)
 		return (0);
-	char *arr = malloc(size * sizeof(char));
-
+	arr = malloc(size * sizeof(char));
 	if (arr == NULL)
 		return (0);
-	for (unsigned int i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 		arr[i] = c;
 	return (arr);
 }
