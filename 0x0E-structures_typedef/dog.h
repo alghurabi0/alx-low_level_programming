@@ -1,3 +1,13 @@
+#ifndef FILE_DOG
+#define FILE_DOG
+
+/**
+ * struct dog - structure called dog
+ * @name: name
+ * @age: age
+ * @owner: owner
+ */
+
 struct dog
 {
 	char *name;
