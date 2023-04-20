@@ -13,8 +13,6 @@ void print_all(const char * const format, ...)
 	va_list args;
 	unsigned int i = 0;
 	char c, *str;
-	int num;
-	float flt;
 
 	va_start(args, format);
 
