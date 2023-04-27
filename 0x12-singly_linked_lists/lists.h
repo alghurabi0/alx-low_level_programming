@@ -1,5 +1,7 @@
-#define MY_HEADER
 #ifndef MY_HEADER
+#define MY_HEADER
+
+#include <stddef.h>
 
 /**
  * struct list_s - singly linked list
