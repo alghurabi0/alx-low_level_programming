@@ -1,15 +1,15 @@
 #include "main.h"
 #define BUF_SIZE 1024
 /**
- * print_error_and_exit - print 
+ * print_error_and_exit - print
+ * main - main
  * @message: msg
- * @argc: no of args
- * @argv: args
  * Return: 0
  */
 void print_error_and_exit(const char *message)
 {
-	dprintf(STDERR_FILENO, "%s\n", message);
+	write(STDERR_FILENO, message, strlen(message));
+	write(STDERR_FILENO, "\n", 1);
 	exit(1);
 }
 int main(int argc, char *argv[])
