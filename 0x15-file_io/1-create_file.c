@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * a function that creates a file.
+ * create_file - a function that creates a file.
  * @filename: the name of the created file
  * @text_content: file content
  * Return: 0
@@ -18,10 +18,10 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content != NULL)
 	{
-		size_t content_length = 0;
+		content_length = 0;
 		while (text_content[content_length] != '\0')
 			content_length++;
-		lw = write(file_descriptor, text_content, content_length);
+		lw = write(fd, text_content, content_length);
 		if (lw == -1)
 		{
 			close(fd);
