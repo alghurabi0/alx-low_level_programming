@@ -3,7 +3,7 @@
  * set_bit - function gthat sets bit
  * @n: unsigned long int
  * @index: unsigned long in
- * Return; 0
+ * Return: 0
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
