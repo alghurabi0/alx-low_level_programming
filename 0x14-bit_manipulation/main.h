@@ -7,6 +7,7 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <string.h>
+#include <math.h>
 
 unsigned int binary_to_uint(const char *b);
 #endif
