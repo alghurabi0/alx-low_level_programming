@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "lists.h"
 /**
  * dlistint_len - func that prints all elements in d list
