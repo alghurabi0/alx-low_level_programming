@@ -12,11 +12,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *item, *current_item;
 	char *val_clone;
 
-	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
+	if (ht == NULL || key == NULL || *key == '\0')
 		return (0);
 	val_clone = strdup(value);
-	if (val_clone == NULL)
-		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
 	current_item = ht->array[index];
 
