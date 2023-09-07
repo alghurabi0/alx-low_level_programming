@@ -8,41 +8,34 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index, i;
-	hash_node_t *item;
-	char *val_clone;
+	unsigned long int index;
+	hash_node_t *item, *current_item;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
-	val_clone = strdup(value);
-	if (val_clone == NULL)
-		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
-
-	for (i = index; ht->array[i]; i++)
+	current_item = ht->array[index];
+	while (current_item != NULL)
 	{
-		if (strcmp(ht->array[i]->key, key) == 0)
+		if (strcmp(current_item->key, key) == 0)
 		{
-			free(ht->array[i]->value);
-			ht->array[i]->value = val_clone;
+			free(current_item->value);
+			current_item->value = strdup(value);
 			return (1);
 		}
 	}
 	item = malloc(sizeof(hash_node_t));
 	if (item == NULL)
-	{
-		free(val_clone);
 		return (0);
-	}
 	item->key = strdup(key);
 	if (item->key == NULL)
 	{
 		free(item);
 		return (0);
 	}
-	item->value = val_clone;
+	item->value = strdup(value);
 	item->next = ht->array[index];
 	ht->array[index] = item;
 
-	return (0);
+	return (1);
 }
