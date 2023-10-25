@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Calculate the perimeter of a rectangle depending on (grid) """
 
 
 def island_perimeter(grid):
