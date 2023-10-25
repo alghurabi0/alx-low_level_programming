@@ -8,34 +8,28 @@ SRC = main.c school.c
 NAME = school
 
 # Cleanup program
-RM = /bin/rm
+# RM = /bin/rm
 
 # Compiler flags
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # Object files derived from source files
 OBJ = $(SRC:.c=.o)
-
+.PHONY : all clean oclean fclean re
 # Default target
-all: $(NAME)
-
-# Build the executable
-$(NAME): $(OBJ)
-	$(CC) $^ -o $@
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 # Clean rule to delete temporary files and the executable
 clean:
-	-$(RM) -f *~ $(NAME)
+	-$(RM) *~ $(NAME)
 
 # OcLean rule to delete object files
 oclean:
-	-$(RM) -f $(OBJ)
+	-$(RM) $(OBJ)
 
 # Fclean rule to delete all temporary files, the executable, and object files
 fclean: clean oclean
 
 # Re rule to force recompilation of all source files
-re: fclean all
-
-.PHONY: all clean oclean fclean re
-
+re: oclean all
